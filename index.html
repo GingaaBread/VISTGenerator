@@ -33,30 +33,15 @@
                 <input type="text" name="text" class="fieldValue" id="fV1">
                 <label for="fV1" class="fieldLabel fl2">Example</label>
             </div>
-            <div class="field">
-                <input type="text" name="text" class="fieldType" id="fT1">
-                <label for="fT1" class="fieldLabel fl1">Example</label>
-                <input type="text" name="text" class="fieldValue" id="fV1">
-                <label for="fV1" class="fieldLabel fl2">Example</label>
-            </div>
-            <div class="field">
-                <input type="text" name="text" class="fieldType" id="fT1">
-                <label for="fT1" class="fieldLabel fl1">Example</label>
-                <input type="text" name="text" class="fieldValue" id="fV1">
-                <label for="fV1" class="fieldLabel fl2">Example</label>
-            </div>
-            <div class="field">
-                <input type="text" name="text" class="fieldType" id="fT1">
-                <label for="fT1" class="fieldLabel fl1">Example</label>
-                <input type="text" name="text" class="fieldValue" id="fV1">
-                <label for="fV1" class="fieldLabel fl2">Example</label>
-            </div>
         </section>
         <button @click="addField">Add Field</button>
-        <input type="number" name="records" id="records" value="1">
+        <div id="recordsContainer">
+            <input type="number" name="records" id="records" value="1">
+            <label for="records">Records</label>
+        </div>
         <hr>
         <section>
-            <h1>VIST</h1>
+            <h1>🗨️ VIST</h1>
             <code id="vist-field"></code>
         </section>        
     </main>

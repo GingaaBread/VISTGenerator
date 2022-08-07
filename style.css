@@ -39,6 +39,28 @@ input {
     border-radius: .3rem;
     font-size: 3rem;
     padding: .8rem 1rem;
+    transition: .8s;
+}
+
+div:focus-within input {
+    color: var(--prm);
+    border-color: var(--prm);
+    outline: 0;
+}
+
+div:focus-within label {
+    color: var(--prm);
+    outline: 0;
+}
+
+label {
+    position: absolute;
+    top: -.5rem;
+    left: var(--field-margin);
+    background-color: white;
+    color: var(--snd);
+    padding: 0 .2rem;
+    transition: 0.8s;
 }
 
 hr {
@@ -115,27 +137,18 @@ main button, main input {
     margin-right: var(--field-margin);
     display: inline;
     width: var(--field-width);
-    transition: .8s;
 }
 
-.field input:focus-within {
-    border-color: var(--prm);
-    outline: 0;
+#recordsContainer {
+    position: relative;
 }
 
-.field .fieldLabel, .field .fieldLabel {
-    position: absolute;
-    top: -.5rem;
-    left: var(--field-margin);
-    background-color: white;
-    color: var(--snd);
-    padding: 0 .2rem;
-    transition: 0.8s;
+#recordsContainer label {
+    left: 1rem;
 }
 
-.field:focus-within .fieldLabel {
-    color: var(--prm);
-    outline: 0;
+#records {
+    width: 5vw;
 }
 
 .field .fieldLabel.fl2 {
