@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>🌊 VIST.gen - Online VIST Generator</title>
+</head>
+<body>
+    <header>
+        <div id="logo" aria-label="The logo of the VISTGenerator displaying">
+            <div class="rect r1"></div>
+            <div class="rect r2"></div>
+            VIST.gen
+        </div>
+    </header>
+    <main>
+        <h1>🌊 VIST Builder Tool</h1>
+        <p>Create VIST data with automated fake-data by configuring the fields below:</p>
+        <section id="input-section">
+            <div class="field">
+                <input type="text" name="text" class="fieldType" id="fT1">
+                <label for="fT1" class="fieldLabel fl1">Example</label>
+                <input type="text" name="text" class="fieldValue" id="fV1">
+                <label for="fV1" class="fieldLabel fl2">Example</label>
+            </div>
+            <div class="field">
+                <input type="text" name="text" class="fieldType" id="fT1">
+                <label for="fT1" class="fieldLabel fl1">Example</label>
+                <input type="text" name="text" class="fieldValue" id="fV1">
+                <label for="fV1" class="fieldLabel fl2">Example</label>
+            </div>
+            <div class="field">
+                <input type="text" name="text" class="fieldType" id="fT1">
+                <label for="fT1" class="fieldLabel fl1">Example</label>
+                <input type="text" name="text" class="fieldValue" id="fV1">
+                <label for="fV1" class="fieldLabel fl2">Example</label>
+            </div>
+            <div class="field">
+                <input type="text" name="text" class="fieldType" id="fT1">
+                <label for="fT1" class="fieldLabel fl1">Example</label>
+                <input type="text" name="text" class="fieldValue" id="fV1">
+                <label for="fV1" class="fieldLabel fl2">Example</label>
+            </div>
+            <div class="field">
+                <input type="text" name="text" class="fieldType" id="fT1">
+                <label for="fT1" class="fieldLabel fl1">Example</label>
+                <input type="text" name="text" class="fieldValue" id="fV1">
+                <label for="fV1" class="fieldLabel fl2">Example</label>
+            </div>
+        </section>
+        <button @click="addField">Add Field</button>
+        <input type="number" name="records" id="records" value="1">
+        <hr>
+        <section>
+            <h1>VIST</h1>
+            <code id="vist-field"></code>
+        </section>        
+    </main>
+</body>
+</html>

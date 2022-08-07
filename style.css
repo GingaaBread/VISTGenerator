@@ -1,0 +1,148 @@
+/* 
+    BASE
+*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+:root {
+    font-family: 'Ubuntu', sans-serif;
+    --header-height: 10vh;
+    --field-margin: 3rem;
+    --field-width: 25vw;
+    --prm: #2e86de;
+    --snd: #8395a7;
+    --brt: #fafafa;
+}
+
+body {
+    margin: 0;
+}
+
+/*
+    COMPONENTS
+*/
+button {
+    background-color: var(--prm);
+    border: 0;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3rem;
+    padding: .8rem 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+input {
+    border: 1px solid var(--snd);
+    border-radius: .3rem;
+    font-size: 3rem;
+    padding: .8rem 1rem;
+}
+
+hr {
+    background-color: var(--snd);
+    width: 70%;
+    height: .2rem;
+    border: 0;
+}
+
+/*
+    HEADER
+*/
+header {
+    width: 100vw;
+    height: var(--header-height);
+    background-color: var(--brt);
+}
+
+#logo {
+    display: inline-block;
+    min-width: var(--header-height); 
+    min-height: var(--header-height);
+}
+
+#logo .rect {
+    min-width: 1vw;
+    min-height: calc(var(--header-height) - 8vh);;
+}
+
+#logo .rect.r1 {
+    background-color: #00d2d3;
+}
+
+#logo .rect.r2 {
+    background-color: #222f3e;
+}
+
+/* 
+    MAIN 
+*/
+main {
+    margin-left: 2rem;
+}
+
+main ~ h1 {
+    font-size: 3rem;
+}
+
+main p {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+#input-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30vh;
+    overflow-y: scroll;
+    margin-bottom: 2rem;
+}
+
+main button, main input {
+    display: block;
+    margin-bottom: 2rem;
+} 
+
+.field {
+    position: relative;
+    display: inline-block;
+}
+
+.field input {
+    margin-right: var(--field-margin);
+    display: inline;
+    width: var(--field-width);
+    transition: .8s;
+}
+
+.field input:focus-within {
+    border-color: var(--prm);
+    outline: 0;
+}
+
+.field .fieldLabel, .field .fieldLabel {
+    position: absolute;
+    top: -.5rem;
+    left: var(--field-margin);
+    background-color: white;
+    color: var(--snd);
+    padding: 0 .2rem;
+    transition: 0.8s;
+}
+
+.field:focus-within .fieldLabel {
+    color: var(--prm);
+    outline: 0;
+}
+
+.field .fieldLabel.fl2 {
+    left: calc(2 * var(--field-margin) + .75 * var(--field-margin) + var(--field-width));
+}
+
+code {
+    background-attachment: var(--snd);
+    min-height: 1rem;
+}
