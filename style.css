@@ -35,20 +35,21 @@ h1 {
 }
 
 input {
+    font-family: 'Ubuntu', sans-serif;
     border: 1px solid var(--snd);
     border-radius: .3rem;
-    font-size: 3rem;
+    font-size: 2rem;
     padding: .8rem 1rem;
     transition: .8s;
 }
 
-div:focus-within input {
+div:focus-within input, li:focus-within input {
     color: var(--prm);
     border-color: var(--prm);
     outline: 0;
 }
 
-div:focus-within label {
+div:focus-within label, li:focus-within label {
     color: var(--prm);
     outline: 0;
 }
@@ -68,6 +69,12 @@ hr {
     width: 70%;
     height: .2rem;
     border: 0;
+}
+
+ul, li {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 /*
@@ -102,7 +109,7 @@ header {
     MAIN 
 */
 main {
-    margin-left: 2rem;
+    margin: 0 2rem;
 }
 
 main ~ h1 {
@@ -117,10 +124,10 @@ main p {
 #input-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 30vh;
     overflow-y: scroll;
-    margin-bottom: 2rem;
+    padding-top: .5rem;
+    margin: 2rem 0;
 }
 
 main button, main input {
@@ -155,7 +162,15 @@ main button, main input {
     left: calc(2 * var(--field-margin) + .75 * var(--field-margin) + var(--field-width));
 }
 
+#code-section {
+    min-width: 100%;
+    position: relative;
+}
+
 code {
-    background-attachment: var(--snd);
-    min-height: 1rem;
+    background-color: var(--brt);
+    position: absolute;
+    width: 60%;
+    padding: 1rem 2rem;
+    font-size: 2rem;
 }

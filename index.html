@@ -17,32 +17,36 @@
             VIST.gen
         </div>
     </header>
-    <main>
+    <main x-data="{ 
+        customVariables: [],
+        addVariable(id, val) {
+            this.customVariables.push({id, val});
+        }
+    }">
         <h1>🌊 VIST Builder Tool</h1>
         <p>Create VIST data with automated fake-data by configuring the fields below:</p>
         <section id="input-section">
-            <div class="field">
-                <input type="text" name="text" class="fieldType" id="fT1">
-                <label for="fT1" class="fieldLabel fl1">Example</label>
-                <input type="text" name="text" class="fieldValue" id="fV1">
-                <label for="fV1" class="fieldLabel fl2">Example</label>
-            </div>
-            <div class="field">
-                <input type="text" name="text" class="fieldType" id="fT1">
-                <label for="fT1" class="fieldLabel fl1">Example</label>
-                <input type="text" name="text" class="fieldValue" id="fV1">
-                <label for="fV1" class="fieldLabel fl2">Example</label>
-            </div>
+            <ul>
+                <template aria-hidden="true" x-for="customVariable in customVariables" :key="customVariable.id">
+                    <li class="field">
+                        <input type="text" name="text" class="fieldType" id="fT1" value="customVariable.id">
+                        <label for="fT1" class="fieldLabel fl1">Identifier</label>
+                        
+                        <input type="text" name="text" class="fieldValue" id="fV1" value="customVariable.value">
+                        <label for="fV1" class="fieldLabel fl2">Value</label>
+                    </li>
+                </template>
+            </ul>
         </section>
-        <button @click="addField">Add Field</button>
+        <button @click="addVariable('', '')">Add Field</button>
         <div id="recordsContainer">
             <input type="number" name="records" id="records" value="1">
             <label for="records">Records</label>
         </div>
         <hr>
-        <section>
+        <section id="code-section">
             <h1>🗨️ VIST</h1>
-            <code id="vist-field"></code>
+            <code>test</code>
         </section>        
     </main>
 </body>
